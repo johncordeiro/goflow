@@ -298,7 +298,7 @@ func (f *flow) Generic() map[string]interface{} {
 // random UUIDs if they aren't in the mapping
 func (f *flow) Clone(depMapping map[uuids.UUID]uuids.UUID) flows.Flow {
 	generic := f.Generic()
-	remapUUIDs(generic, depMapping)
+	// remapUUIDs(generic, depMapping)
 
 	// read back as a real flow in the current spec.. since we control this it can't error in theory
 	return MustReadFlowFromGeneric(generic)
